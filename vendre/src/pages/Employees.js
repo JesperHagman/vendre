@@ -1,12 +1,11 @@
-import "./App.css";
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 
-function App() {
+function Employees() {
   const [users, setUser] = useState([]);
 
   const fetchUser = async () => {
-    const res = await axios.get("https://reqres.in/api/users");
+    const res = await axios.get("https://reqres.in/api/users?page=2");
     setUser(res.data.data);
     console.log(res.data.data);
   };
@@ -36,4 +35,4 @@ function App() {
   );
 }
 
-export default App;
+export default Employees;
