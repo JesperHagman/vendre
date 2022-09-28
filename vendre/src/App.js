@@ -17,12 +17,12 @@ function App() {
   return (
     <div className="App">
         {users.map((user) => (
-          <div key={user.id}>
-            <img src={user.avatar} alt="a face" />
-            <p>
+          <div key={user.id} className='User' >
+            <img src={user.avatar} alt="a face" className="Pic"/>
+            <p className="Name" >
               {user.first_name} {user.last_name}
             </p>
-            <a href="mailto:" {...user.email}>
+            <a href="mailto:" {...user.email} className='Contact' >
               Contact
             </a>
           </div>
