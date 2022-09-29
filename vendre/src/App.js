@@ -24,14 +24,17 @@ function App() {
             <p className="Name">
               {user.first_name} {user.last_name}
             </p>
-            <a href="mailto:" {...user.email} className="Contact">
+            <a
+              href={`mailto:${user.email}`}>
               Contact
             </a>
           </div>
         ))}
       </div>
-      <a href="/"> 1 </a>
-      <a href="/Employees"> 2 </a>
+      <div className="Container">
+        <a href="/" className="Pages"> 1 </a>
+        <a href="/Employees" className="Pages"> 2 </a>
+      </div>
     </div>
   );
 }

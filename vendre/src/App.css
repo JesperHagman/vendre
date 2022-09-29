@@ -12,10 +12,18 @@
   background-color: rgb(229, 225, 219);
   border-radius: 10%;
   opacity: 0.9;
+  text-decoration: none;
 }
 
 .Pic {
   border-radius: 50%;
 }
 
+.Pages {
+  
+}
 
+.Container {
+  display:block;
+  text-align: center;
+}

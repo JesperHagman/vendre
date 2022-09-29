@@ -8,6 +8,7 @@ function Employees() {
     const res = await axios.get("https://reqres.in/api/users?page=2");
     setUser(res.data.data);
     console.log(res.data.data);
+    console.log(res.data.data[5])
   };
 
   useEffect(() => {
@@ -23,14 +24,14 @@ function Employees() {
             <p className="Name">
               {user.first_name} {user.last_name}
             </p>
-            <a href="mailto:" {...user.email} className="Contact">
-              Contact
-            </a>
+            <a href={`mailto:${user.email}`}>Contact</a>
           </div>
         ))}
       </div>
-      <a href="/"> 1 </a>
-      <a href="/Employees"> 2 </a>
+      <div className="Container">
+        <a href="/"> 1 </a>
+        <a href="/Employees"> 2 </a>
+      </div>
     </div>
   );
 }
